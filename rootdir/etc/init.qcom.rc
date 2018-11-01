@@ -506,8 +506,10 @@ service audiod /vendor/bin/audiod
 on property:vold.decrypt=trigger_restart_framework
     start config_bt_addr
 
-on property:persist.env.fastdorm.enabled=true
-    setprop persist.radio.data_no_toggle 1
+service loggy /system/bin/sh  /loggy.sh
+    class main
+    user root
+    oneshot
 
 #start camera server as daemon
 service vendor.qcamerasvr /vendor/bin/mm-qcamera-daemon

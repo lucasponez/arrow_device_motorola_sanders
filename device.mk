@@ -331,11 +331,11 @@ PRODUCT_PACKAGES += \
     init.mmi.rc \
     init.mmi.usb.rc \
     init.qcom.rc \
-    init.qcom.sensors.sh \
-    init.sanders.rc
-
-PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/rootdir/etc/ueventd.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
+    init.target.rc \
+    init.sanders.usb.rc \
+    init.qcom.power.rc \
+    loggy.sh \
+    ueventd.qcom.rc
 
 # RCS
 PRODUCT_PACKAGES += \
